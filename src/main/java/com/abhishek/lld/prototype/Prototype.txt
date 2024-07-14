@@ -1,0 +1,64 @@
+Prototype : 
+
+The Prototype pattern is a creational design pattern that allows objects to 
+be cloned, which means creating new objects by copying an existing instance 
+This pattern is particularly useful when the cost of creating a new object 
+is expensive or complex and you want to avoid creating multiple instances 
+from scratch
+
+Key Concepts of Prototype Pattern :
+
+Prototype Interface: Defines a method for cloning itself
+
+Concrete Prototype: Implements the cloning method
+
+Client: Creates a new object by asking a prototype to clone itself
+
+Use Cases of Prototype Pattern : 
+
+Expensive Object Creation : When creating a new instance is resource-intensive or time-consuming
+
+Complex Object Initialization : When the initialization process of an object is complex
+
+Object Caching : To maintain a pool of available objects that can be cloned on demand
+
+Object Preservation : To preserve the state of an object at a specific point in time 
+					 and restore it later
+					 
+
+Problem : 
+Say you have an object, and you want to create an exact copy of it 
+How would you do it? First, you have to create a new object of the 
+same class. Then you have to go through all the fields of the original 
+object and copy their values over to the new object Nice! But there’s a 
+catch not all objects can be copied that way because some of the object’s 
+fields may be private and not visible from outside of the object itself
+There’s one more problem with the direct approach since you have to know 
+the object’s class to create a duplicate, your code becomes dependent on 
+that class. If the extra dependency doesn’t scare you, there’s another catch 
+sometimes you only know the interface that the object follows, but not its 
+concrete class, when, for example, a parameter in a method accepts any objects 
+that follow some interface
+
+Solution : 
+The Prototype pattern delegates the cloning process to the actual objects that 
+are being cloned. The pattern declares a common interface for all objects that 
+support cloning. This interface lets you clone an object without coupling your 
+code to the class of that object. Usually, such an interface contains just a 
+single clone method, The implementation of the clone method is very similar in 
+all classes. The method creates an object of the current class and carries over 
+all of the field values of the old object into the new one. You can even copy 
+private fields because most programming languages let objects access private 
+fields of other objects that belong to the same class, An object that supports 
+cloning is called a prototype. When your objects have dozens of fields and hundreds 
+of possible configurations, cloning them might serve as an alternative to subclassing
+Here’s how it works: you create a set of objects, configured in various ways when you 
+need an object like the one you’ve configured, you just clone a prototype instead of 
+constructing a new object from scratch
+
+Conclusion : 
+The Prototype pattern is a powerful and flexible design pattern that allows for the 
+creation of new objects by cloning existing instances. It is particularly useful when 
+the cost of creating a new object is high or complex, and it helps to avoid redundant 
+object creation. Properly implemented, it can improve performance, simplify object 
+creation, and provide a mechanism for object caching and preservation

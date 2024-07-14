@@ -1,0 +1,44 @@
+Iterator : 
+Iterator is a behavioral design pattern that lets you traverse elements of 
+a collection without exposing its underlying representation (list, stack, tree, etc.)
+The main idea of the Iterator pattern is to extract the traversal behavior of a 
+collection into a separate object called an iterator
+
+The Iterator pattern is a behavioral design pattern that provides a way to 
+access elements of an aggregate object (such as a collection) sequentially 
+without exposing its underlying representation. It simplifies traversal of 
+a collection by providing a uniform interface for various types of collections
+
+Key Concepts of Iterator Pattern : 
+
+Iterator: Defines an interface for accessing elements sequentially
+
+Concrete Iterator: Implements the Iterator interface and keeps track 
+				   of the current position in the traversal of the aggregate
+
+Aggregate: Defines an interface for creating an Iterator object
+
+Concrete Aggregate: Implements the Aggregate interface to create an Iterator 
+					specific to that collection
+					
+Use Cases of Iterator Pattern : 
+Traversing Collections: 
+Simplifies the traversal of collections (arrays, lists, trees) 
+without exposing their internal structure
+
+Accessing Database Results: 
+Iterates over database query results without directly handling database operations
+
+Menu Navigation: Navigates through menu items in GUI applications
+
+File System Traversal: Iterates over files and directories in a file system
+
+Conclusion : 
+The Iterator pattern provides a uniform way to access elements of a collection 
+without exposing its internal structure. In this example, we demonstrated how 
+to use the Iterator pattern to iterate over an array of integers using a custom 
+iterator (IntegerArrayIterator). By using the Iterator pattern, we can iterate 
+over different types of collections using a standardized interface, promoting 
+code reusability and separation of concerns
+
+

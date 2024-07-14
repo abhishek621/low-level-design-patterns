@@ -1,0 +1,56 @@
+Facade : 
+Facade is a structural design pattern that provides a simplified interface 
+to a library, a framework, or any other complex set of classes
+
+The Facade pattern is a structural design pattern that provides a simplified 
+interface to a complex subsystem. It aims to make the subsystem easier to use 
+by providing a high-level interface that shields the client from the subsystem's 
+complexities
+
+Key Concepts of Facade Pattern : 
+
+Facade: Provides a simplified interface to the complex subsystem
+
+Subsystem Classes: The classes that perform the work and have complex interactions
+
+Use Cases of Facade Pattern : 
+
+Simplifying Complex Subsystems: 
+When you have a complex subsystem with many classes 
+and interactions, and you want to simplify its use
+
+Providing a Unified Interface: 
+When you need to provide a unified interface to a set of interfaces in a subsystem
+
+Layered Architecture: 
+When you want to define entry points to each subsystem level, 
+using Facades to layer the application
+
+Problem : 
+Imagine that you must make your code work with a broad set of objects that 
+belong to a sophisticated library or framework. Ordinarily, you’d need to 
+initialize all of those objects, keep track of dependencies, execute methods 
+in the correct order, and so on as a result, the business logic of your classes 
+would become tightly coupled to the implementation details of 3rd-party classes, 
+making it hard to comprehend and maintain
+
+Solution : 
+A facade is a class that provides a simple interface to a complex subsystem which 
+contains lots of moving parts. A facade might provide limited functionality in 
+comparison to working with the subsystem directly. However, it includes only 
+those features that clients really care about Having a facade is handy when 
+you need to integrate your app with a sophisticated library that has dozens 
+of features, but you just need a tiny bit of its functionality for instance, 
+an app that uploads short funny videos with cats to social media could potentially 
+use a professional video conversion library. However, all that it really needs is 
+a class with the single method encode(filename, format). After creating such a class 
+and connecting it with the video conversion library, you’ll have your first facade
+
+Conclusion : 
+The Facade pattern simplifies the use of a complex subsystem by providing a 
+high-level interface. In this example, we demonstrated how to use the Facade 
+pattern to simplify the process of booking a vacation, which involves multiple 
+subsystems like flight booking, hotel booking, car rental, and insurance booking 
+By using the Facade pattern, we can hide the complexities of these subsystems 
+from the client and provide a simplified and unified interface. This promotes 
+a more maintainable and extensible codebase

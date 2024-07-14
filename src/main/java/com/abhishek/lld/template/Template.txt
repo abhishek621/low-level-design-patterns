@@ -1,0 +1,54 @@
+Template Method Pattern : 
+
+The Template Method pattern defines the skeleton of an algorithm in a method, 
+deferring some steps to subclasses. It allows subclasses to redefine certain 
+steps of an algorithm without changing the algorithm's structure
+
+Template Method is a behavioral design pattern that defines the skeleton of an 
+algorithm in the superclass but lets subclasses override specific steps of the 
+algorithm without changing its structure
+
+Use Cases of Template Method Pattern : 
+
+Data Processing Pipelines : 
+Defining a general data processing workflow where specific steps can vary
+
+Game Development : 
+Defining the game loop where specific game behaviors (like rendering, updating, 
+input handling) can vary
+
+GUI Frameworks : 
+Defining a general structure for rendering GUI components where specific rendering logic can vary
+
+Testing Frameworks : 
+Defining a general structure for running tests where 
+specific test setup, execution, and teardown can vary
+
+Problem : 
+Imagine that you’re creating a data mining application that analyzes corporate 
+documents. Users feed the app documents in various formats (PDF, DOC, CSV), and 
+it tries to extract meaningful data from these docs in a uniform format The first 
+version of the app could work only with DOC files. In the following version, it was 
+able to support CSV files. A month later, you “taught” it to extract data from PDF files
+At some point, you noticed that all three classes have a lot of similar code. While the 
+code for dealing with various data formats was entirely different in all classes, the code 
+for data processing and analysis is almost identical. Wouldn’t it be great to get rid of 
+the code duplication, leaving the algorithm structure intact? There was another problem 
+related to client code that used these classes. It had lots of conditionals that picked 
+a proper course of action depending on the class of the processing object. If all three 
+processing classes had a common interface or a base class, you’d be able to eliminate 
+the conditionals in client code and use polymorphism when calling methods on a 
+processing object
+
+Solution : 
+The Template Method pattern suggests that you break down an algorithm into a series of 
+steps, turn these steps into methods, and put a series of calls to these methods inside 
+a single template method. The steps may either be abstract, or have some default implementation 
+To use the algorithm, the client is supposed to provide its own subclass, implement all abstract 
+steps, and override some of the optional ones if needed (but not the template method itself)
+
+Conclusion : 
+The Template Method pattern is useful when you have a fixed algorithm structure with some 
+steps that may vary. By defining the algorithm skeleton in an abstract class and implementing 
+the variable steps in subclasses, you achieve code reuse and flexibility. This pattern helps 
+keep the algorithm structure consistent while allowing subclasses to customize specific steps

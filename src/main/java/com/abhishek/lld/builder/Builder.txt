@@ -1,0 +1,34 @@
+Builder : 
+
+The Builder pattern is a creational design pattern that allows you to construct 
+complex objects step by step. It separates the construction of a complex object 
+from its representation so that the same construction process can create different 
+representations. This pattern is especially useful when an object can be configured 
+in many different ways or when the creation process involves multiple steps
+
+Key Concepts of Builder Pattern : 
+Builder Interface: Specifies an abstract interface for creating parts of a Product object
+
+Concrete Builder: Implements the Builder interface to construct and assemble parts of the product
+
+Product: The complex object that is being built
+
+Director: Constructs an object using the Builder interface
+
+Use Cases of Builder Pattern : 
+Complex Objects: When an object requires numerous steps to construct
+
+Immutable Objects: To build immutable objects where construction 
+requires a set of mandatory attributes and a set of optional attributes
+
+UI Components: For constructing complex UI elements with numerous configuration options
+
+Configuration Objects: When creating configuration objects with a variety of parameters
+
+Conclusion :
+The Builder pattern is a powerful and flexible design pattern that allows for the 
+step-by-step construction of complex objects. It is particularly useful in scenarios 
+where an object requires multiple steps to construct or where there are numerous 
+configurations and options. Properly implemented, it promotes code readability, 
+maintainability, and separation of concerns by isolating the construction logic 
+from the representation of the object

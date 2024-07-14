@@ -1,0 +1,44 @@
+Memento : 
+Also known as Snapshot, Memento is a behavioral design pattern that lets you save 
+and restore the previous state of an object without revealing the details of its 
+implementation The Memento pattern delegates creating the state snapshots to the 
+actual owner of that state, the originator object. Hence, instead of other objects 
+trying to copy the editor’s state from the “outside,” the editor class itself can 
+make the snapshot since it has full access to its own state, The pattern suggests 
+storing the copy of the object’s state in a special object called memento. The 
+contents of the memento aren’t accessible to any other object except the one that 
+produced it Other objects must communicate with mementos using a limited interface
+which may allow fetching the snapshot’s metadata (creation time, the name of the 
+performed operation, etc.), but not the original object’s state contained in the 
+snapshot
+
+The Memento pattern is a behavioral design pattern that allows capturing and 
+storing the current state of an object (the originator) without violating 
+encapsulation. This stored state can later be restored to bring the object 
+back to its previous state
+
+Key Concepts of Memento Pattern :
+
+Originator: The object whose state needs to be saved and restored
+
+Memento: Represents the stored state of the Originator
+
+CareTaker: Responsible for holding and managing Mementos
+
+Client: Initiates requests to save and restore Originator's state
+
+Use Cases : 
+This example illustrates how the Memento pattern can be used in gaming scenarios
+
+Save-Load Mechanism: Saving and restoring game states, such as player health, position, and progress
+
+Undo Mechanism: Allowing players to undo actions or revert to previous game states
+
+Checkpoint Systems: Implementing checkpoints where game states can be saved and restored
+
+Conclusion : 
+The Memento pattern is useful in scenarios where you need to save and restore the state 
+of an object, providing mechanisms for undo operations, checkpoints, and game saves In 
+this example, we applied the Memento pattern to manage the state of a game character's 
+health points, demonstrating its practical use in game development and beyond
+

@@ -1,0 +1,75 @@
+Adapter : 
+
+The Adapter pattern, also known as the Wrapper pattern, is a structural design 
+pattern that allows incompatible interfaces to work together, It acts as a bridge 
+between two incompatible interfaces, enabling them to communicate, The Adapter 
+pattern is particularly useful when you want to reuse existing code but the 
+interfaces are incompatible with the code you want to integrate
+
+Key Concepts of Adapter Pattern : 
+
+Target Interface: This is the interface that the client expects to interact with
+
+Adaptee: This is the existing interface that needs to be adapted
+
+Adapter: This is the class that implements the Target interface 
+		 and translates the requests to the Adaptee
+
+Client: This is the code that interacts with the Target interface
+
+Use Cases of Adapter Pattern : 
+
+Legacy System Integration: 
+When integrating a new system with legacy systems that have incompatible interfaces
+
+Third-Party Libraries: 
+When using third-party libraries with different interfaces from what your code expects
+
+Different Data Formats: 
+When converting data formats between different parts of a system
+
+API Mismatches: 
+When adapting interfaces between different APIs
+
+Problem :
+Imagine that you’re creating a stock market monitoring app. The app downloads 
+the stock data from multiple sources in XML format and then displays nice-looking 
+charts and diagrams for the user, At some point, you decide to improve the app by 
+integrating a smart 3rd-party analytics library. But there’s a catch: the analytics 
+library only works with data in JSON format
+
+You could change the library to work with XML. However, this might break some 
+existing code that relies on the library. And worse, you might not have access 
+to the library’s source code in the first place, making this approach impossible
+
+Solution : 
+You can create an adapter. This is a special object that converts the interface 
+of one object so that another object can understand it, An adapter wraps one of 
+the objects to hide the complexity of conversion happening behind the scenes 
+The wrapped object isn’t even aware of the adapter. For example, you can wrap 
+an object that operates in meters and kilometers with an adapter that converts 
+all of the data to imperial units such as feet and miles Adapters can not only 
+convert data into various formats but can also help objects with different 
+interfaces collaborate. Here’s how it works:
+
+The adapter gets an interface, compatible with one of the existing objects
+Using this interface, the existing object can safely call the adapter’s methods
+Upon receiving a call, the adapter passes the request to the second object, but 
+in a format and order that the second object expects sometimes it’s even possible 
+to create a two-way adapter that can convert the calls in both directions
+
+Let’s get back to our stock market app. To solve the dilemma of incompatible 
+formats, you can create XML-to-JSON adapters for every class of the analytics 
+library that your code works with directly. Then you adjust your code to 
+communicate with the library only via these adapters. When an adapter receives 
+a call, it translates the incoming XML data into a JSON structure and passes the 
+call to the appropriate methods of a wrapped analytics object
+
+Conclusion : 
+The Adapter pattern is a powerful and flexible design pattern that allows incompatible 
+interfaces to work together. It is particularly useful for integrating legacy systems, 
+using third-party libraries, converting data formats, and adapting APIs. Properly 
+implemented, it promotes code reusability, flexibility, and maintainability by 
+allowing existing classes to be used in new ways without modification
+
+

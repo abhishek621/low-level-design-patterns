@@ -1,0 +1,53 @@
+State : 
+State is a behavioral design pattern that lets an object alter its behavior 
+when its internal state changes. It appears as if the object changed its class
+The State pattern suggests that you create new classes for all possible states 
+of an object and extract all state-specific behaviors into these classes.
+Instead of implementing all behaviors on its own, the original object, called 
+context, stores a reference to one of the state objects that represents its 
+current state, and delegates all the state-related work to that object
+
+The State pattern is a behavioral design pattern that allows an object 
+to change its behavior when its internal state changes. It is particularly 
+useful when an object needs to exhibit different behaviors depending on its 
+state, and it helps to manage state-specific behavior cleanly
+
+Key Concepts of State Pattern : 
+
+Context: 
+The class that maintains an instance of a State subclass 
+and delegates state-specific behavior to this instance
+
+State: 
+An interface that defines the behavior associated with a particular state
+
+Concrete States: 
+Classes that implement the State interface and encapsulate 
+the behavior associated with a particular state of the context
+
+Example: Traffic Light System
+Let's create an example of a traffic light system, where the traffic 
+light changes behavior based on its state (e.g red, yellow, green)
+
+Use Cases of State Pattern : 
+
+UI Components : 
+Changing the behavior of UI components based on their state (e.g enabled, disabled, focused)
+
+Game Development : 
+Managing different states of a game character (e.g idle, running, jumping)
+
+Workflow Systems : 
+Handling various states in workflow systems (e.g pending, approved, rejected)
+
+Network Protocols : 
+Implementing different states in network protocols (e.g connection states)
+
+Conclusion : 
+The State pattern allows an object to change its behavior when its internal state 
+changes. In this example, we implemented a traffic light system where the light 
+changes from red to green to yellow and back to red, demonstrating the State 
+pattern's ability to manage state-specific behavior. This pattern helps keep 
+the code clean and maintainable by encapsulating state-specific logic within 
+state classes
+

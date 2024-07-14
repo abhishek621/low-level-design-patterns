@@ -1,0 +1,40 @@
+Factory Method : 
+
+The Factory Method pattern is a creational design pattern that provides 
+an interface for creating objects in a superclass but allows subclasses 
+to alter the type of objects that will be created. This pattern is 
+particularly useful when the exact type of object to be created is 
+not known until runtime or when the creation process involves complex 
+logic that should not be duplicated across the application
+
+Key Concepts of Factory Method Pattern : 
+
+Product Interface: Defines the interface of objects the factory method creates
+
+Concrete Products: Different implementations of the product interface
+
+Creator Class: Declares the factory method, which returns an object of type Product
+
+Concrete Creators: Override the factory method to return an instance of a Concrete Product
+
+Use Cases of Factory Method Pattern : 
+
+Frameworks: 
+When a framework needs to allow users to extend and specify their own implementations
+
+Plugin Architecture: 
+For dynamically loaded plugins where the specific type of object to be created 
+is not known until runtime
+
+Resource Management: 
+When resource allocation and deallocation need to be controlled in a uniform manner
+
+GUI Toolkits: To create UI components that can be customized and extended
+
+Conclusion : 
+The Factory Method pattern is a versatile and powerful design pattern that provides 
+a flexible way to create objects. It is useful in scenarios where the exact type of 
+object is determined at runtime or where the creation logic is complex. This pattern 
+promotes loose coupling and adheres to the Open/Closed Principle by allowing new product 
+types to be added with minimal changes to existing code
+

@@ -1,0 +1,33 @@
+Command : 
+
+Also known as: Action, Transaction, Command is a behavioral design pattern that 
+turns a request into a stand-alone object that contains all information about the 
+request. This transformation lets you pass requests as a method arguments, delay 
+or queue a request’s execution, and support undoable operations
+
+The Command pattern is a behavioral design pattern that turns a request into 
+a stand-alone object that contains all the information about the request 
+This transformation allows you to parameterize methods with different requests, 
+delay or queue a request's execution, and support undoable operations
+
+Key Concepts of Command Pattern :
+
+Command: An interface for executing an operation
+
+Concrete Command: Implements the Command interface to perform a specific action
+
+Receiver: The object that performs the actual action when the command is executed
+
+Invoker: Asks the command to carry out the request
+
+Client: Creates the command and sets its receiver
+
+Use Cases of Command Pattern : 
+GUI Buttons and Menus: To handle actions triggered by GUI elements
+
+Undo/Redo Operations: To support undo and redo functionality in applications
+
+Transaction Management: To manage database transactions
+
+Task Scheduling: To queue and execute tasks at a later time
+

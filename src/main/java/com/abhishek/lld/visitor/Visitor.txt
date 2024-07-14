@@ -1,0 +1,32 @@
+Visitor Pattern : 
+
+The Visitor design pattern allows you to add new operations to a set 
+of classes without modifying those classes. It is useful when you have 
+a set of related classes and want to perform different kinds of operations 
+on them based on their structure
+
+Visitor is a behavioral design pattern that lets you separate algorithms from the 
+objects on which they operate The Visitor pattern suggests that you place the new 
+behavior into a separate class called visitor, instead of trying to integrate it 
+into existing classes. The original object that had to perform the behavior is 
+now passed to one of the visitor’s methods as an argument, providing the method 
+access to all necessary data contained within the object
+
+Use Cases of Visitor Pattern : 
+
+Calculators : 
+Implementing different calculators (area, perimeter) for geometric shapes
+
+Serialization : 
+Converting complex structures into different formats (XML, JSON) based on their types
+
+Optimization : 
+Performing optimizations (e.g., code generation) on abstract syntax trees in compilers
+
+Conclusion : 
+The Visitor pattern separates operations from the objects on which they operate, 
+allowing you to add new operations without modifying the objects themselves. It 
+promotes extensibility and flexibility by keeping related operations grouped 
+together in visitor classes. This pattern is particularly useful when you have 
+a complex hierarchy of objects and want to perform different kinds of operations 
+on them based on their type

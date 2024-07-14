@@ -1,0 +1,66 @@
+Bridge : 
+ 
+Bridge is a structural design pattern that lets you split a large class 
+or a set of closely related classes into two separate hierarchies abstraction 
+and implementation which can be developed independently of each other
+
+Bridge pattern pattern separates an object's abstraction from its implementation 
+so that the two can vary independently. This is useful when you need to decouple 
+a class from its implementation, allowing both to be developed independently and 
+enabling the implementation to evolve without changing the client code
+
+Key Concepts of Bridge Pattern : 
+
+Abstraction: Defines the interface for the abstraction's part of the object
+
+Refined Abstraction: extends the interface defined by Abstraction
+
+Implementor: Defines the interface for implementation classes
+
+Concrete Implementor: Implements the Implementor interface
+
+Use Cases of Bridge Pattern : 
+
+Platform Independence: 
+When you need to develop a system that works across multiple platforms
+
+Decoupling Interface and Implementation: 
+
+When you want to separate an abstraction from its implementation
+
+Run-time Binding of Implementation: When implementations should be chosen at runtime
+
+Scaling: When a class hierarchy grows too large due to different combinations of implementations
+
+Problem : 
+Abstraction? Implementation? Sound scary? Stay calm and let’s consider a simple example
+say you have a geometric Shape class with a pair of subclasses: Circle and Square. You 
+want to extend this class hierarchy to incorporate colors, so you plan to create Red 
+and Blue shape subclasses. However, since you already have two subclasses, you’ll need 
+to create four class combinations such as BlueCircle and RedSquare
+
+Adding new shape types and colors to the hierarchy will grow it exponentially for example 
+to add a triangle shape you’d need to introduce two subclasses, one for each color and 
+after that, adding a new color would require creating three subclasses, one for each shape 
+type. The further we go, the worse it becomes
+
+Solution : 
+This problem occurs because we’re trying to extend the shape classes in two independent 
+dimensions: by form and by color. That’s a very common issue with class inheritance
+The Bridge pattern attempts to solve this problem by switching from inheritance to 
+the object composition. What this means is that you extract one of the dimensions 
+into a separate class hierarchy, so that the original classes will reference an 
+object of the new hierarchy, instead of having all of its state and behaviors 
+within one class, Following this approach, we can extract the color-related code 
+into its own class with two subclasses: Red and Blue. The Shape class then gets 
+a reference field pointing to one of the color objects. Now the shape can delegate 
+any color-related work to the linked color object. That reference will act as a bridge 
+between the Shape and Color classes. From now on, adding new colors won’t require 
+changing the shape hierarchy, and vice versa
+
+Conclusion : 
+The Bridge pattern is a powerful and flexible design pattern that helps to decouple 
+an abstraction from its implementation. It allows both to vary independently, promoting 
+flexibility and scalability. By using the Bridge pattern, you can change the implementation 
+of an abstraction at runtime and extend the system with new abstractions and implementations 
+without modifying existing code. This leads to a more maintainable and extensible codebase

@@ -1,0 +1,34 @@
+Flyweight : 
+
+Also known as Cache, Flyweight is a structural design pattern that lets you fit more 
+objects into the available amount of RAM by sharing common parts of state between 
+multiple objects instead of keeping all of the data in each object
+
+The Flyweight pattern is a structural design pattern that allows you to share objects 
+to support large numbers of fine-grained objects efficiently. It aims to minimize memory 
+usage by sharing as much data as possible with similar objects. Flyweight is particularly 
+useful when dealing with a large number of objects that have similar data
+
+Key Concepts of Flyweight Pattern : 
+
+Flyweight: The shared object that can be used in multiple contexts simultaneously
+
+Flyweight Factory: Manages and creates Flyweight objects
+
+Intrinsic State: The state that is shared between objects
+
+Extrinsic State: The state that is unique to each object and can be passed as arguments
+
+Use Cases of Flyweight Pattern : 
+Text Editors: Sharing character glyphs
+Game Development: Using shared graphics for similar objects
+Data Caching: Reusing and sharing data among multiple contexts
+Network Applications: Managing connections efficiently
+
+Conclusion : 
+The Flyweight pattern allows you to reduce memory usage by sharing common data 
+among multiple objects. In this example, we demonstrated how to use the Flyweight 
+pattern to efficiently manage a large number of tree objects with shared intrinsic 
+data. By using the Flyweight pattern, we can minimize memory usage and improve 
+performance, especially when dealing with a large number of similar objects 
+This promotes a more maintainable and extensible codebase

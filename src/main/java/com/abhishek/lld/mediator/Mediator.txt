@@ -1,0 +1,52 @@
+Mediator :
+
+Also known as Intermediary, Controller, Mediator is a behavioral design pattern that 
+lets you reduce chaotic dependencies between objects. The pattern restricts direct 
+communications between the objects and forces them to collaborate only via a mediator 
+object, The Mediator pattern suggests that you should cease all direct communication 
+between the components which you want to make independent of each other. Instead, 
+these components must collaborate indirectly, by calling a special mediator object 
+that redirects the calls to appropriate components. As a result, the components 
+depend only on a single mediator class instead of being coupled to dozens of 
+their colleagues
+
+The Mediator pattern is a behavioral design pattern that defines an object 
+(the mediator) that encapsulates how a set of objects interact with each other 
+It promotes loose coupling by keeping objects from referring to each other 
+explicitly and allows variations in their interaction independently
+
+Key Concepts of Mediator Pattern : 
+
+Mediator: Defines an interface for communicating with colleague objects
+
+Concrete Mediator: Implements cooperative behavior by coordinating Colleague objects
+
+Colleague: Each Colleague class knows its Mediator object and communicates with 
+it whenever it would have otherwise communicated with another colleague
+
+Implementation in Java : 
+Let's create an example to demonstrate the Mediator pattern. We'll simulate a 
+chat room where users can send messages to each other through a central chat 
+room mediator
+
+Use Cases of Mediator Pattern : 
+GUI Components: 
+A mediator between different UI components (e.g., dialogs, buttons) can handle complex interactions
+
+Flight Control System: A mediator can coordinate communication between flights (colleagues) 
+and control towers (mediator)
+
+Event Driven Systems: 
+Mediator can manage events between different modules without them directly communicating
+
+Chat Applications: Managing communication between users (colleagues) through a central 
+chat room (mediator)
+
+Conclusion : 
+The Mediator pattern facilitates the interaction between objects by encapsulating their 
+interaction in a mediator object. In this example, we demonstrated how to use the Mediator 
+pattern to manage communication between users in a chat room. By using the Mediator pattern, 
+we achieve loose coupling between objects and allow them to vary their interaction independently, 
+promoting better maintainability and flexibility in the design
+
+

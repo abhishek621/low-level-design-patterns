@@ -1,0 +1,101 @@
+Behavioral patterns : 
+
+Behavioral patterns take care of effective communication 
+and the assignment of responsibilities between objects
+These patterns are concerned with algorithms and the 
+assignment of responsibilities between objects
+
+Types of Behavioral patterns : 
+Chain of Responsibilty
+Command
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template Method
+Visitor
+
+Chain of Responsibility : 
+Also known as: CoR, Chain of Command, Chain of Responsibility is a behavioral 
+design pattern that lets you pass requests along a chain of handlers. Upon 
+receiving a request, each handler decides either to process the request or 
+to pass it to the next handler in the chain
+
+Command : 
+Also known as: Action, Transaction, Command is a behavioral design pattern that 
+turns a request into a stand-alone object that contains all information about the 
+request. This transformation lets you pass requests as a method arguments, delay 
+or queue a request’s execution, and support undoable operations
+
+Iterator : 
+Iterator is a behavioral design pattern that lets you traverse elements of 
+a collection without exposing its underlying representation (list, stack, tree, etc.)
+The main idea of the Iterator pattern is to extract the traversal behavior of a 
+collection into a separate object called an iterator
+
+Mediator :
+Also known as Intermediary, Controller, Mediator is a behavioral design pattern that 
+lets you reduce chaotic dependencies between objects. The pattern restricts direct 
+communications between the objects and forces them to collaborate only via a mediator 
+object, The Mediator pattern suggests that you should cease all direct communication 
+between the components which you want to make independent of each other. Instead, 
+these components must collaborate indirectly, by calling a special mediator object 
+that redirects the calls to appropriate components. As a result, the components 
+depend only on a single mediator class instead of being coupled to dozens of 
+their colleagues
+
+Memento : 
+Also known as Snapshot, Memento is a behavioral design pattern that lets you save 
+and restore the previous state of an object without revealing the details of its 
+implementation The Memento pattern delegates creating the state snapshots to the 
+actual owner of that state, the originator object. Hence, instead of other objects 
+trying to copy the editor’s state from the “outside,” the editor class itself can 
+make the snapshot since it has full access to its own state, The pattern suggests 
+storing the copy of the object’s state in a special object called memento. The 
+contents of the memento aren’t accessible to any other object except the one that 
+produced it Other objects must communicate with mementos using a limited interface
+which may allow fetching the snapshot’s metadata (creation time, the name of the 
+performed operation, etc.), but not the original object’s state contained in the 
+snapshot
+
+Observer : 
+Also known as Event-Subscriber, Listener, Observer is a behavioral design pattern 
+that lets you define a subscription mechanism to notify multiple objects about any 
+events that happen to the object they’re observing The Observer pattern suggests 
+that you add a subscription mechanism to the publisher class so individual objects 
+can subscribe to or unsubscribe from a stream of events coming from that publisher 
+Fear not! Everything isn’t as complicated as it sounds. In reality, this mechanism 
+consists of 
+1) an array field for storing a list of references to subscriber objects and 
+2) several public methods which allow adding subscribers to and removing them 
+   from that list
+
+State : 
+State is a behavioral design pattern that lets an object alter its behavior 
+when its internal state changes. It appears as if the object changed its class
+The State pattern suggests that you create new classes for all possible states 
+of an object and extract all state-specific behaviors into these classes.
+Instead of implementing all behaviors on its own, the original object, called 
+context, stores a reference to one of the state objects that represents its 
+current state, and delegates all the state-related work to that object
+
+Strategy : 
+The Strategy pattern is a behavioral design pattern that defines a family of 
+algorithms, encapsulates each one, and makes them interchangeable. This pattern 
+allows the algorithm to vary independently from clients that use it. The Strategy 
+pattern is useful when you need to select an algorithm at runtime
+
+Template Method : 
+Template Method is a behavioral design pattern that defines the skeleton of an 
+algorithm in the superclass but lets subclasses override specific steps of the 
+algorithm without changing its structure
+
+Visitor : 
+Visitor is a behavioral design pattern that lets you separate algorithms from the 
+objects on which they operate The Visitor pattern suggests that you place the new 
+behavior into a separate class called visitor, instead of trying to integrate it 
+into existing classes. The original object that had to perform the behavior is 
+now passed to one of the visitor’s methods as an argument, providing the method 
+access to all necessary data contained within the object
