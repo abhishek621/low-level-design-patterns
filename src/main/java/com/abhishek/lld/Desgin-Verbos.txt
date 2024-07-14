@@ -1,0 +1,185 @@
+High-level design patterns are broadly categorized strategies or templates 
+used in designing software systems to solve common design problems. Here are 
+some of the key high-level design patterns frequently used in software 
+engineering :
+
+Creational Patterns ::
+
+Factory Method : 
+Defines an interface for creating objects, but lets 
+subclasses decide which class to instantiate
+
+Abstract Factory : 
+Provides an interface for creating families of related 
+or dependent objects without specifying their concrete classes
+
+Singleton : 
+Ensures a class has only one instance and provides a global point of access to it
+
+Builder : 
+Separates the construction of a complex object from its representation, 
+allowing the same construction process to create different representations
+
+Structural Patterns ::
+
+Adapter : 
+Allows objects with incompatible interfaces to work together by providing a wrapping interface
+
+Decorator : 
+Adds behavior to objects dynamically without affecting the behavior of other 
+objects from the same class
+
+Facade : 
+Provides a simplified interface to a larger body of code, such as a complex subsystem
+
+Proxy : 
+Controls access to the original object by acting as an intermediary
+
+Behavioral Patterns ::
+
+Observer :: 
+Defines a one-to-many dependency between objects so that when one object changes 
+state, all its dependents are notified and updated automatically
+
+Strategy : 
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable
+
+Command : 
+Encapsulates a request as an object, thereby letting you parameterize clients 
+with different requests, queue or log requests, and support undoable operations
+
+Template Method : 
+Defines the skeleton of an algorithm in a method, deferring some steps to subclasses
+
+Iterator : 
+Provides a way to access the elements of an aggregate object sequentially without 
+exposing its underlying representation
+
+State : 
+Allows an object to alter its behavior when its internal state changes
+
+Visitor : 
+Represents an operation to be performed on the elements of an object structure 
+without changing the classes of the elements
+
+Architectural Patterns:
+
+Model-View-Controller (MVC) : 
+Separates an application into three main components : Model (business logic), 
+View (user interface), and Controller (intermediary that handles input)
+
+Layered Architecture : 
+Organizes software into layers (e.g., presentation, business logic, data access) 
+to separate concerns and manage dependencies
+
+Microservices: 
+Structures an application as a collection of loosely coupled, independently deployable services
+
+Concurrency Patterns:
+
+Thread Pool : 
+Manages a pool of threads to execute tasks concurrently, improving performance 
+by avoiding the overhead of thread creation
+
+Producer-Consumer: 
+Coordinates multiple threads where some threads produce data and others consume 
+it, using a shared data buffer
+
+These patterns provide standardized solutions to common design challenges, 
+promoting modularity, flexibility, and maintainability in software systems 
+each pattern addresses specific aspects of software design, helping developers 
+make informed design decisions based on established best practices
+
+Separation of Concerns (SoC): 
+Divide the system into distinct sections, each addressing a separate concern 
+(e.g., user interface, data storage, business logic) to improve modularity 
+and maintainability
+
+Single Responsibility Principle (SRP): 
+Each module or class should have only one reason to change, 
+focusing on a single functionality or responsibility
+
+Open/Closed Principle (OCP): 
+Software entities (classes, modules, functions) should be open for extension 
+but closed for modification. This encourages adding new functionality without 
+altering existing code
+
+Liskov Substitution Principle (LSP): 
+Objects of a superclass should be replaceable with objects of its subclasses 
+without affecting the correctness of the program. This ensures interoperability 
+and compatibility of derived classes
+
+Dependency Inversion Principle (DIP): 
+High-level modules should not depend on low-level modules; both should 
+depend on abstractions. Abstractions should not depend on details, details 
+should depend on abstractions. This promotes decoupling and flexibility
+
+Don't Repeat Yourself (DRY): 
+Avoid duplicating code by abstracting common functionalities into reusable 
+modules or functions to reduce redundancy and maintenance overhead
+
+Minimize Coupling : 
+Reduce dependencies between modules or components to improve flexibility, 
+testability, and ease of modification
+
+Maximize Cohesion : 
+Keep related functionalities together within the same module or class 
+to promote readability, maintainability, and understanding of code
+
+Encapsulation : 
+Encapsulate data and functionalities within classes or modules, exposing 
+only necessary interfaces to interact with them while hiding internal 
+implementation details
+
+Design for Change : 
+Anticipate and design for future changes and enhancements, ensuring the 
+system can evolve gracefully over time without requiring major rewrites
+
+These principles guide the overall architecture and design decisions of a 
+system, promoting maintainability, scalability, and robustness while addressing 
+common challenges in software development. They are complementary to design patterns, 
+which provide specific solutions to recurring design problems within these 
+architectural frameworks
+
+Modularity : 
+Breaking down a system into smaller, functional modules that can be developed, 
+modified, and tested independently. This promotes reusability, maintainability, 
+and scalability
+
+Abstraction : 
+Hiding unnecessary details and exposing only relevant functionalities or behaviors 
+to simplify the complexity of the system
+
+Encapsulation : 
+Bundling data (attributes) and methods (functions) that operate on the data into 
+a single unit (class), and restricting access to some of the object's components 
+This promotes data integrity and makes the code easier to manage and reuse
+
+Decoupling : 
+Reducing dependencies between modules or components to minimize the impact 
+of changes in one part of the system on other parts. This improves flexibility 
+and maintainability
+
+Component-Based Architecture : 
+Designing the system by assembling pre-built, self-contained, and reusable 
+components/modules that communicate through well-defined interfaces. This 
+promotes reusability, maintainability, and flexibility
+
+Service-Oriented Architecture (SOA) : 
+Designing the system as a collection of loosely coupled services that communicate 
+with each other over a network. Each service implements a specific business function 
+and can be independently deployed and scaled
+
+Event-Driven Architecture (EDA): 
+Designing the system where components communicate through events and event handlers 
+This enables loosely coupled interactions and supports scalability and responsiveness
+
+Domain-Driven Design (DDD) : 
+Focusing on the core domain and domain logic of the system when designing the architecture 
+This approach emphasizes collaboration between domain experts and software developers to 
+create a domain model that reflects real-world business processes and rules
+
+These concepts provide a framework for structuring and organizing the design of software 
+systems, emphasizing flexibility, scalability, maintainability, and ease of understanding 
+They are fundamental to creating robust and adaptable software architectures that meet the 
+requirements and challenges of complex systems
